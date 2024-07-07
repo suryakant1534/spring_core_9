@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="com.spring.Account" id="account1"/>
+    <bean class="com.spring.Account" id="account2" autowire-candidate="false"/>
+
+    <bean class="com.spring.Car" id="car"/>
+
+    <util:list id="books" list-class="java.util.ArrayList" value-type="java.lang.String">
+        <value>Hc Verma</value>
+        <value>Bharti Bhavan</value>
+        <value>Java Complete reference</value>
+    </util:list>
+
+    <bean class="com.spring.Employee" id="employee" autowire="constructor"/>
+
+</beans>
